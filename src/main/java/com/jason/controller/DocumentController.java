@@ -44,7 +44,7 @@ public class DocumentController {
     // creating a get mapping that retrieves the detail of a specific document with
     // versions
     @GetMapping(path = "/{id}")
-    private Document getStudent(@PathVariable("id") int id) {
+    private Document getDocumentById(@PathVariable("id") int id) {
         return documentService.getDocumentById(id);
     }
 
@@ -72,7 +72,7 @@ public class DocumentController {
     // Done
     // creating a delete mapping that deletes a specific document
     @DeleteMapping(path = "/{id}")
-    private void deleteStudent(@PathVariable("id") int id) {
+    private void deleteDocument(@PathVariable("id") int id) {
         documentService.delete(id);
     }
 
